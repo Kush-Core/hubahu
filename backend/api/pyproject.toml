@@ -1,0 +1,18 @@
+[project]
+name = "hubahu-api"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "hubahu-core",
+]
+
+[project.scripts]
+hubahu-api = "hubahu_api:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+hubahu-core = { workspace = true }

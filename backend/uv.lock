@@ -1,0 +1,43 @@
+version = 1
+revision = 5
+requires-python = ">=3.12"
+
+[manifest]
+members = [
+    "hubahu",
+    "hubahu-api",
+    "hubahu-core",
+    "hubahu-worker",
+]
+
+[[package]]
+name = "hubahu"
+version = "0.1.0"
+source = { virtual = "." }
+
+[[package]]
+name = "hubahu-api"
+version = "0.1.0"
+source = { editable = "api" }
+dependencies = [
+    { name = "hubahu-core" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "hubahu-core", editable = "core" }]
+
+[[package]]
+name = "hubahu-core"
+version = "0.1.0"
+source = { editable = "core" }
+
+[[package]]
+name = "hubahu-worker"
+version = "0.1.0"
+source = { editable = "worker" }
+dependencies = [
+    { name = "hubahu-core" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "hubahu-core", editable = "core" }]

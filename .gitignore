@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# uv
+.venv/
+
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Secrets: never commit; .env.example is the only exception
+.env
+.env.*
+!.env.example
+
+# Large or private artifacts (model weights, golden-set audio)
+/models/
+/data/
+*.onnx
+*.wav
+*.mp3
+*.flac
+*.m4a
+# Allow tiny audio fixtures used by tests
+!**/tests/fixtures/**/*.wav
+
+# Claude Code personal files (frontend)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
