@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img width="100%" alt="Hubahu — Checks Hindi audio episodes against their scripts and flags mismatches" src="assets/header-light.svg">
+</picture>
+
 # Hubahu
 
 Hubahu checks Hindi audio episodes against their scripts and reports only the places
